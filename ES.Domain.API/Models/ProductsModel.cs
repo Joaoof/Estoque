@@ -1,4 +1,10 @@
-﻿public class ProductModel
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ES.Domain.API.Models;
+
+
+[Table("Produtos")]
+public class ProductsModel
 {
     public int Id { get; set; }                      // Identificador único do produto
 

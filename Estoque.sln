@@ -20,6 +20,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ES.Domain.API", "ES.Domain.API\ES.Domain.API.csproj", "{E40C0E3A-36AA-4E4C-8310-FAABC44D6DE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ES.Infra.API", "ES.Infra.API\ES.Infra.API.csproj", "{079DD2ED-379F-4444-B943-D9259122B072}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E40C0E3A-36AA-4E4C-8310-FAABC44D6DE1} = {E40C0E3A-36AA-4E4C-8310-FAABC44D6DE1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
