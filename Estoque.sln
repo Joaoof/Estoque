@@ -21,6 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Services", "4 - Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ES.Services.API", "ES.Services.API\ES.Services.API.csproj", "{E11CE95C-6239-4F49-881D-8D3671462759}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{07F8CD59-4A41-483A-9FEF-2C9B8E1458E5}"
+	ProjectSection(SolutionItems) = preProject
+		ProdutosModel.cs = ProdutosModel.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +61,7 @@ Global
 		{E624A66A-B80D-4194-B613-FF4AA73662A7} = {3933179D-5FA7-4E05-ADC5-ABF79C779B49}
 		{ADCBF9E3-210C-4126-9E09-F6F74613DD3F} = {7052A5D1-B85B-43F1-8A07-15D163C3A150}
 		{E11CE95C-6239-4F49-881D-8D3671462759} = {ADCBF9E3-210C-4126-9E09-F6F74613DD3F}
+		{07F8CD59-4A41-483A-9FEF-2C9B8E1458E5} = {A4DCB223-C690-448E-AC10-D7A97F264EC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {216E3358-7580-466B-99F9-C348743B46F5}
