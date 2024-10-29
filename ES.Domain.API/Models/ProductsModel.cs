@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ES.Domain.API.Models
 {
-    [Table("Produtos", Schema = "dbo")]
-    public class ProductModel
+    [Table("Produtos", Schema = "estoque")]
+    public class ProductsModel
     {
         [Key]
         public int Id { get; set; }

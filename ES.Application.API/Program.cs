@@ -1,7 +1,10 @@
+using ES.Application.API.Configurations;
 using ES.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var _configuration = builder.Configuration;
 
 // Add services to the container.
 
@@ -10,6 +13,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EstoqueContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("ES.Infra.API")));
+
+builder.Services.AddDatabase(_configuration);
 
 var app = builder.Build();
 
