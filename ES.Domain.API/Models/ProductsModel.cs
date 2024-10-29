@@ -1,30 +1,48 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ES.Domain.API.Models;
-
-
-[Table("Produtos")]
-public class ProductsModel
+namespace ES.Domain.API.Models
 {
-    public int Id { get; set; }                      // Identificador único do produto
+    [Table("Produtos", Schema = "dbo")]
+    public class ProductModel
+    {
+        [Key]
+        public int Id { get; set; }
 
-    public string Name { get; set; }                 // Nome do produto
+        [Required]
+        [StringLength(100)]
+        public string Name { get; set; }
 
-    public string Description { get; set; }          // Descrição detalhada do produto
+        [StringLength(500)]
+        public string Description { get; set; }
 
-    public string SKUCode { get; set; }              // Código SKU (Stock Keeping Unit) para controle
+        [Required]
+        [StringLength(20)]
+        public string SKUCode { get; set; }
 
-    public decimal Price { get; set; }               // Preço do produto
+        [Required]
+        [Range(0, 99999.99)]
+        public decimal Price { get; set; }
 
-    public int StockQuantity { get; set; }           // Quantidade atual em estoque
+        [Required]
+        public int StockQuantity { get; set; }
 
-    public DateTime DateAdded { get; set; }          // Data de inclusão do produto no sistema
+        [Required]
+        public DateTime DateAdded { get; set; }
 
-    public int CategoryId { get; set; }              // Relacionamento com uma categoria de produto (opcional)
+        [Required]
+        [Range(0, 999.99)]
+        public decimal Weight { get; set; }
 
-    public decimal Weight { get; set; }              // Peso do produto, útil para cálculo de frete
+        [StringLength(100)]
+        public string Location { get; set; }
 
-    public string Location { get; set; }             // Localização no depósito ou armazém
+        [Required]
+        public bool IsActive { get; set; }
 
-    public bool IsActive { get; set; }               // Status de disponibilidade do produto
+        public string CreatedBy { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public string UpdatedBy { get; set; }
+        public DateTime UpdatedDate { get; set; }
+    }
 }
