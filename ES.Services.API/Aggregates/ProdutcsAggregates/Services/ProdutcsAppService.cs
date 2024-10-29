@@ -1,5 +1,5 @@
-﻿]using ES.Domain.API.Models;
-]using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
+﻿using ES.Domain.API.Models;
+using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 
 namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 {
