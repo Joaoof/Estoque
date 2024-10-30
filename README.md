@@ -38,4 +38,12 @@ dotnet restore
 # Iniciar o servidor
 dotnet run
 
+```
+## Endpoints da API
+
+A documentação da API é disponibilizada através do **Swagger**, permitindo que você visualize e teste todos os endpoints de forma interativa.
+
+Para acessar a documentação do Swagger, basta iniciar o servidor e navegar até [http://localhost:3000/api-docs](http://localhost:3000/api-docs) (substitua `3000` pela porta que sua API está usando, se diferente).
+
+
 
