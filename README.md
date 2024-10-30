@@ -46,4 +46,24 @@ A documentação da API é disponibilizada através do **Swagger**, permitindo q
 Para acessar a documentação do Swagger, basta iniciar o servidor e navegar até [http://localhost:3000/api-docs](http://localhost:3000/api-docs) (substitua `3000` pela porta que sua API está usando, se diferente).
 
 
+## Diagrama de Arquitetura
+![Diagrama de Arquitetura](link-para-seu-diagrama-arquitetura.png)
+*Descrição breve do que o diagrama representa e como os componentes interagem.*
+
+## Diagrama de Classes
+![Diagrama de Classes](link-para-seu-diagrama-classes.png)
+*Descrição breve do que o diagrama representa e a estrutura do código.*
+
+## Diagrama de Fluxo
+![Diagrama de Fluxo](link-para-seu-diagrama-fluxo.png)
+*Descrição breve do fluxo de requisições na API.*
+
+## Contribuição
+Instruções para contribuir com o projeto, como enviar pull requests e reportar problemas.
+
+## Licença
+Informações sobre a licença do projeto.
+
+
+
 
