@@ -2,11 +2,6 @@
 using ES.Domain.API.Models;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ES.Infra.API.Repositories
 {
@@ -20,9 +15,9 @@ namespace ES.Infra.API.Repositories
             _DbsetPessoa = dbFactory.DbContext.Set<ProductsModel>();
         }
 
-        public Task<ProductsModel> GetId(int id)
+        public async Task<ProductsModel> GetId(int id)
         {
-            throw new NotImplementedException();
+            return await _DbsetPessoa.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 }

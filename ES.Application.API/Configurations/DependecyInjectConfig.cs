@@ -1,4 +1,9 @@
-﻿using ES.Infra.API.Context;
+﻿using ES.Domain.API.Interfaces.Repositories;
+using ES.Infra.API;
+using ES.Infra.API.Context;
+using ES.Infra.API.Repositories;
+using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
+using ES.Services.API.Aggregates.ProdutcsAggregates.Services;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +22,18 @@ namespace ES.Application.API.Configurations
             services.AddScoped<DbFactory>();
 
             return services;
+        }
+
+        public static IServiceCollection AddRepositories(this IServiceCollection services)
+        {
+            return services
+                .AddScoped(typeof(IProductsRepository), typeof(ProductsRepository));
+
+        }
+
+        public static IServiceCollection AddServices(this IServiceCollection services, ConfigurationManager _configuration)
+        {
+            return services.AddScoped<IProductsAppService, ProductsAppService>();
         }
     }
 }

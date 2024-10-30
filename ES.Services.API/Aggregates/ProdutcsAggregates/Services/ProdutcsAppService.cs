@@ -1,14 +1,23 @@
-﻿using ES.Domain.API.Models;
+﻿using ES.Domain.API.Interfaces.Repositories;
+using ES.Domain.API.Models;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 
 namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 {
-    public class ProdutcsAppService : IProductsServices
+    public class ProductsAppService : IProductsAppService
     {
         private readonly IProductsRepository _productsRepository;
-        public Task<ProductsModel> GetInformationProducts(int id)
+
+        public ProductsAppService(IProductsRepository productsRepository)
         {
-            throw new NotImplementedException();
+            _productsRepository = productsRepository;
+        }
+
+        public async Task<ProductsModel> GetInformationProducts(int id)
+        {
+            var products = await _productsRepository.GetId(id);
+
+            return products;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces
 {
-    public interface IProductsServices
+    public interface IProductsAppService
     {
         Task<ProductsModel> GetInformationProducts(int id); 
     }

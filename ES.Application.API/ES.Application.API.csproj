@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ES.Infra.API\ES.Infra.API.csproj" />
+    <ProjectReference Include="..\ES.Services.API\ES.Services.API.csproj" />
   </ItemGroup>
 
 </Project>

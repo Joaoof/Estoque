@@ -16,6 +16,12 @@ builder.Services.AddDbContext<EstoqueContext>(options => options.UseNpgsql(build
 
 builder.Services.AddDatabase(_configuration);
 
+builder.Services.AddDatabase(_configuration);
+builder.Services.AddRepositories();
+
+// Adicione seus serviços e configurações aqui
+builder.Services.AddServices(_configuration);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
