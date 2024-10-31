@@ -47,7 +47,7 @@ Para acessar a documentação do Swagger, basta iniciar o servidor e navegar at�
 
 
 ## Diagrama de Arquitetura
-![Diagrama de Arquitetura]([link-para-seu-diagrama-arquitetura.png](https://drive.google.com/file/d/1UTWnVaWtN6wohbdPyDokcClaidC_HwXh/view?usp=drive_link))
+![Diagrama de Arquitetura](link-para-seu-diagrama-arquitetura.png](https://drive.google.com/file/d/1UTWnVaWtN6wohbdPyDokcClaidC_HwXh/view?usp=drive_link))
 *Descrição breve do que o diagrama representa e como os componentes interagem.*
 
 ## Diagrama de Classes
