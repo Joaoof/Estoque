@@ -279,11 +279,13 @@
         <mxCell id="O8rQRezEnrOVKIBrAvco-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeColor=#000000;" edge="1" parent="1" source="AIZ_yMWvvYAOfZ4UDoPY-2" target="O8rQRezEnrOVKIBrAvco-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4e2ZxK1nFe5Ttex92Jjw-1" value="Chamada de métodos - Objetos&lt;div&gt;&amp;nbsp;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2086C9;spacingLeft=0;arcSize=6;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=none;fillColor=#63BEF2;" vertex="1" connectable="0" parent="O8rQRezEnrOVKIBrAvco-5">
-          <mxGeometry x="0.1304" y="-4" relative="1" as="geometry">
-            <mxPoint x="10" y="4" as="offset" />
-          </mxGeometry>
-        </mxCell>
+        <UserObject label="Chamada de métodos - Objetos&lt;div&gt;&amp;nbsp;&lt;/div&gt;" link="data:page/id,mJTvQH946EByhLQ1PTxT" id="4e2ZxK1nFe5Ttex92Jjw-1">
+          <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2086C9;spacingLeft=0;arcSize=6;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=none;fillColor=#63BEF2;" vertex="1" connectable="0" parent="O8rQRezEnrOVKIBrAvco-5">
+            <mxGeometry x="0.1304" y="-4" relative="1" as="geometry">
+              <mxPoint x="10" y="4" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
         <mxCell id="4e2ZxK1nFe5Ttex92Jjw-2" value="" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2086C9;spacingLeft=0;arcSize=6;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#63BEF2;" vertex="1" connectable="0" parent="O8rQRezEnrOVKIBrAvco-5">
           <mxGeometry x="-0.4783" y="-6" relative="1" as="geometry">
             <mxPoint as="offset" />
@@ -329,13 +331,13 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="mJTvQH946EByhLQ1PTxT" name="Página-6">
+  <diagram id="mJTvQH946EByhLQ1PTxT" name="Repositories">
     <mxGraphModel dx="1393" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="mZLPbCgd7dSV9oy5egWT-3" value="&lt;div&gt;GetByName(name string)&lt;/div&gt;&lt;div&gt;GetAllAsync(Expression&amp;lt;Func&amp;lt;T, bool&amp;gt;&amp;gt; expression)&lt;/div&gt;AddAsync(T entity)&lt;div&gt;UpdateAsync(T entity)&lt;/div&gt;&lt;div&gt;Delete(Expression&amp;lt;Func&amp;lt;T, bool&amp;gt;&amp;gt; expression)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;" vertex="1" parent="1">
-          <mxGeometry x="226" y="558" width="310" height="90" as="geometry" />
+        <mxCell id="mZLPbCgd7dSV9oy5egWT-3" value="&lt;div&gt;GetByName(name string)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;GetAllAsync(Expression&amp;lt;Func&amp;lt;T, bool&amp;gt;&amp;gt; expression)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;AddAsync(T entity)&lt;div&gt;&lt;br&gt;&lt;div&gt;UpdateAsync(T entity)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Delete(Expression&amp;lt;Func&amp;lt;T, bool&amp;gt;&amp;gt; expression)&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="226" y="533" width="310" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
