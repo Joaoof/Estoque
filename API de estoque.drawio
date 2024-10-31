@@ -265,7 +265,7 @@
         <UserObject label="Contrato&lt;div&gt;&lt;br&gt;&lt;/div&gt;" id="O8rQRezEnrOVKIBrAvco-10">
           <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O8rQRezEnrOVKIBrAvco-2">
             <mxGeometry x="0.0104" y="-2" relative="1" as="geometry">
-              <mxPoint x="5" y="-1" as="offset" />
+              <mxPoint x="-15" y="-1" as="offset" />
             </mxGeometry>
           </mxCell>
         </UserObject>
