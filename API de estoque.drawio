@@ -262,25 +262,20 @@
         <mxCell id="1" parent="0" />
         <object placeholders="1" c4Name="APP" c4Type="APP" c4Technology="NextJs" c4Description="Requisição" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="AIZ_yMWvvYAOfZ4UDoPY-1">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
-            <mxGeometry x="310" width="240" height="120" as="geometry" />
-          </mxCell>
-        </object>
-        <object placeholders="1" c4Name="ProductsAppController" c4Type="Component" c4Technology="EntityFramework REST" c4Description="Responsável por receber a requisição &#xa;/products&#xa;&#xa;(GET, POST, PUT, DELETE)" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="AIZ_yMWvvYAOfZ4UDoPY-3">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
-            <mxGeometry x="40" y="640" width="240" height="120" as="geometry" />
+            <mxGeometry x="260" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="ProductsRepository" c4Type="Component" c4Technology="EntityFramework" c4Description="Responsável pelo cadastro de produtos" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="O8rQRezEnrOVKIBrAvco-1">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
-            <mxGeometry x="40" y="1080" width="240" height="120" as="geometry" />
+            <mxGeometry y="850" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Base de dados" c4Type="DB" c4Technology="PostgreSQL" c4Description="Armazenar produtos" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="O8rQRezEnrOVKIBrAvco-7">
           <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="1" vertex="1">
-            <mxGeometry x="40" y="1320" width="240" height="120" as="geometry" />
+            <mxGeometry x="240" y="1169" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="O8rQRezEnrOVKIBrAvco-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="O8rQRezEnrOVKIBrAvco-1" target="O8rQRezEnrOVKIBrAvco-7" edge="1">
+        <mxCell id="O8rQRezEnrOVKIBrAvco-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="O8rQRezEnrOVKIBrAvco-1" target="O8rQRezEnrOVKIBrAvco-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="B5BVoj99j0Qw6nU_H1zp-1" value="(Consultas SQL - geradas pelo EF)&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2086C9;spacingLeft=0;arcSize=6;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=none;fillColor=#63BEF2;" parent="O8rQRezEnrOVKIBrAvco-8" vertex="1" connectable="0">
@@ -288,26 +283,26 @@
             <mxPoint x="97" y="8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <object c4Name="ProductsAppService" c4Type="Component" c4Technology="EntityFramework Service" c4Description="Responsável pela regras de negocio e cadastro de produtos &#xa;&#xa;GetInformationProducts(),&#xa;CreateProduct(), &#xa;UpdateProduct(),&#xa;DeleteProduct()" label="&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b style=&quot;font-size: 9px;&quot;&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt; " placeholders="1" id="AIZ_yMWvvYAOfZ4UDoPY-2">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=0;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];spacingLeft=0;fontSize=9;verticalAlign=middle;direction=east;rotation=0;glass=0;imageAspect=1;imageWidth=50;imageHeight=103;fillOpacity=100;fixDash=0;container=0;fixedWidth=0;" parent="1" vertex="1">
+        <object c4Name="ProductsAppService" c4Type="Component" c4Technology="EntityFramework Service" c4Description="Responsável pela regras de negocio e cadastro de produtos &#xa;&#xa;GetInformationProducts(),&#xa;GetInformationAllProducts(),&#xa;CreateProduct(), &#xa;UpdateProduct(),&#xa;DeleteProduct()" label="&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt; " placeholders="1" id="AIZ_yMWvvYAOfZ4UDoPY-2">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=0;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];spacingLeft=0;fontSize=8;verticalAlign=middle;direction=east;rotation=0;glass=0;imageAspect=1;imageWidth=50;imageHeight=103;fillOpacity=100;fixDash=0;container=0;fixedWidth=0;" parent="1" vertex="1">
             <mxGeometry x="540" y="790" width="240" height="120" relative="1" as="geometry">
-              <mxPoint x="40" y="870" as="offset" />
+              <mxPoint y="640" as="offset" />
             </mxGeometry>
           </mxCell>
         </object>
         <object placeholders="1" c4Name="ProductsAppController" c4Type="Component" c4Technology="EntityFramework REST" c4Description="Responsável por receber a requisição &#xa;/products&#xa;&#xa;(GET, POST, PUT, DELETE)" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fqSSZPXZT1l8UA6rYqxK-1">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="40" y="450" width="240" height="120" as="geometry" />
+            <mxGeometry y="450" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Sistemas de Estoque" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="fqSSZPXZT1l8UA6rYqxK-3">
           <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry width="840" height="1530" as="geometry" />
+            <mxGeometry width="980" height="1540" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="ProductsModule" c4Type="Module" c4Technology="EF" c4Description="Lógica relacionada ao produto - métodos HTTP" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="fqSSZPXZT1l8UA6rYqxK-4">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="50" y="260" width="240" height="120" as="geometry" />
+            <mxGeometry y="260" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="fqSSZPXZT1l8UA6rYqxK-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.458;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="AIZ_yMWvvYAOfZ4UDoPY-1" target="fqSSZPXZT1l8UA6rYqxK-4">
@@ -316,7 +311,7 @@
         <UserObject label="Contrato" link="data:page/id,fhobZokMRSuOwA_f8mlF" id="fqSSZPXZT1l8UA6rYqxK-6">
           <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=default;labelBorderColor=none;fontFamily=Lucida Console;" vertex="1" connectable="0" parent="fqSSZPXZT1l8UA6rYqxK-5">
             <mxGeometry x="-0.1318" relative="1" as="geometry">
-              <mxPoint x="-85" y="418" as="offset" />
+              <mxPoint x="-75" y="228" as="offset" />
             </mxGeometry>
           </mxCell>
         </UserObject>
@@ -327,18 +322,16 @@
         </mxCell>
         <mxCell id="fqSSZPXZT1l8UA6rYqxK-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" edge="1" parent="1" source="fqSSZPXZT1l8UA6rYqxK-4">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="160" y="450" as="targetPoint" />
+            <mxPoint x="120" y="450" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="160" y="380" />
-              <mxPoint x="160" y="450" />
+              <mxPoint x="120" y="450" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="fqSSZPXZT1l8UA6rYqxK-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="fqSSZPXZT1l8UA6rYqxK-1" target="AIZ_yMWvvYAOfZ4UDoPY-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="fqSSZPXZT1l8UA6rYqxK-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="AIZ_yMWvvYAOfZ4UDoPY-3" target="AIZ_yMWvvYAOfZ4UDoPY-2">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="fqSSZPXZT1l8UA6rYqxK-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="fqSSZPXZT1l8UA6rYqxK-1" target="AIZ_yMWvvYAOfZ4UDoPY-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="760" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <UserObject label="Chamada dos métodos - Objeto" link="data:page/id,OQTP4D4YmMb0-30ZHUw1" id="fqSSZPXZT1l8UA6rYqxK-11">
           <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fqSSZPXZT1l8UA6rYqxK-10">
@@ -353,13 +346,16 @@
         <UserObject label="Chamada dos métodos da minha repository - Objeto" link="data:page/id,mJTvQH946EByhLQ1PTxT" id="fqSSZPXZT1l8UA6rYqxK-13">
           <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fqSSZPXZT1l8UA6rYqxK-12">
             <mxGeometry x="-0.2571" y="1" relative="1" as="geometry">
-              <mxPoint as="offset" />
+              <mxPoint x="9" y="-3" as="offset" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="nJVD2BJpUuh8TJpJHG57-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" edge="1" parent="1" source="nJVD2BJpUuh8TJpJHG57-2" target="nJVD2BJpUuh8TJpJHG57-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <object placeholders="1" c4Name="FornecedorModule" c4Type="Module" c4Technology="EF" c4Description="Logica responsável pelo fornecedor - métodos HTTP" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="nJVD2BJpUuh8TJpJHG57-2">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
-            <mxGeometry x="320" y="260" width="240" height="120" as="geometry" />
+            <mxGeometry x="270" y="260" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="nJVD2BJpUuh8TJpJHG57-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.458;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="AIZ_yMWvvYAOfZ4UDoPY-1" target="nJVD2BJpUuh8TJpJHG57-2">
@@ -370,6 +366,37 @@
             <mxPoint x="1" y="-5" as="offset" />
           </mxGeometry>
         </mxCell>
+        <object placeholders="1" c4Name="SuppliersAppController" c4Type="Component" c4Technology="EntityFramework REST" c4Description="Responsável por receber a requisição &#xa;/suppliers&#xa;&#xa;(GET, POST, PUT, DELETE)" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="nJVD2BJpUuh8TJpJHG57-6">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="270" y="450" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="SuppliersAppService" c4Type="Component" c4Technology="EntityFramework REST" c4Description="Responsável pela regras de negocio e cadastro de fornecedores&#xa;&#xa;GetInformationSuppliers(),&#xa;GetInformationAllSuppliers(),&#xa;CreateSuppliers(), &#xa;UpdateSuppliers(),&#xa;DeleteSuppliers()" label="&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="nJVD2BJpUuh8TJpJHG57-9">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fontSize=8;" vertex="1" parent="1">
+            <mxGeometry x="270" y="640" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="nJVD2BJpUuh8TJpJHG57-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nJVD2BJpUuh8TJpJHG57-6" target="nJVD2BJpUuh8TJpJHG57-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJVD2BJpUuh8TJpJHG57-11" value="Chamada dos métodos - Objeto" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nJVD2BJpUuh8TJpJHG57-10">
+          <mxGeometry x="-0.1143" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="SuppliersRepository" c4Type="Component" c4Technology="EntityFramework" c4Description="Responsável pelo cadastro de fornecedor/produtos dos fornecedores" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="nJVD2BJpUuh8TJpJHG57-12">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="270" y="850" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="nJVD2BJpUuh8TJpJHG57-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nJVD2BJpUuh8TJpJHG57-9" target="nJVD2BJpUuh8TJpJHG57-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Chamada dos métodos da minha repository - Objeto" id="nJVD2BJpUuh8TJpJHG57-14">
+          <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="400" y="790" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
