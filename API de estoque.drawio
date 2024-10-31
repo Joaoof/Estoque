@@ -519,6 +519,21 @@
         <mxCell id="isuXG6XbdbYDKzx2xJJz-28" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;(Consultas SQL - geradas pelo EF)&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
           <mxGeometry x="720.0002059841456" y="1090.0032634967877" as="geometry" />
         </mxCell>
+        <UserObject label="Contrato" link="data:page/id,fhobZokMRSuOwA_f8mlF" id="isuXG6XbdbYDKzx2xJJz-31">
+          <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=default;labelBorderColor=none;fontFamily=Lucida Console;" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="389.99910739461234" y="410.00066944740934" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Contrato" link="data:page/id,fhobZokMRSuOwA_f8mlF" id="isuXG6XbdbYDKzx2xJJz-32">
+          <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=default;labelBorderColor=none;fontFamily=Lucida Console;" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="659.9991073946123" y="410.00066944740934" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Contrato" link="data:page/id,fhobZokMRSuOwA_f8mlF" id="isuXG6XbdbYDKzx2xJJz-33">
+          <mxCell style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=default;labelBorderColor=none;fontFamily=Lucida Console;" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="929.9991073946123" y="410.00066944740934" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
