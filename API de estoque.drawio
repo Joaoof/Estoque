@@ -275,12 +275,14 @@
             <mxGeometry x="240" y="1169" width="240" height="120" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="O8rQRezEnrOVKIBrAvco-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="O8rQRezEnrOVKIBrAvco-1" target="O8rQRezEnrOVKIBrAvco-7" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="O8rQRezEnrOVKIBrAvco-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" parent="1" source="O8rQRezEnrOVKIBrAvco-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="1180" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="B5BVoj99j0Qw6nU_H1zp-1" value="(Consultas SQL - geradas pelo EF)&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2086C9;spacingLeft=0;arcSize=6;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=none;fillColor=#63BEF2;" parent="O8rQRezEnrOVKIBrAvco-8" vertex="1" connectable="0">
+        <mxCell id="B5BVoj99j0Qw6nU_H1zp-1" value="(Consultas SQL - geradas pelo EF)&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2086C9;spacingLeft=0;arcSize=6;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;fillColor=#63BEF2;" parent="O8rQRezEnrOVKIBrAvco-8" vertex="1" connectable="0">
           <mxGeometry x="-0.16" y="3" relative="1" as="geometry">
-            <mxPoint x="97" y="8" as="offset" />
+            <mxPoint x="7" y="8" as="offset" />
           </mxGeometry>
         </mxCell>
         <object c4Name="ProductsAppService" c4Type="Component" c4Technology="EntityFramework Service" c4Description="Responsável pela regras de negocio e cadastro de produtos &#xa;&#xa;GetInformationProducts(),&#xa;GetInformationAllProducts(),&#xa;CreateProduct(), &#xa;UpdateProduct(),&#xa;DeleteProduct()" label="&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt; " placeholders="1" id="AIZ_yMWvvYAOfZ4UDoPY-2">
@@ -397,6 +399,12 @@
             <mxGeometry x="400" y="790" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="isuXG6XbdbYDKzx2xJJz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.625;entryY=0.092;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nJVD2BJpUuh8TJpJHG57-12" target="O8rQRezEnrOVKIBrAvco-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="isuXG6XbdbYDKzx2xJJz-2" value="(Consultas SQL - geradas pelo EF)&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2086C9;spacingLeft=0;arcSize=6;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;fillColor=#63BEF2;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="400.00090113877036" y="1070.0023836816245" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
