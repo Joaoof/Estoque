@@ -12,6 +12,7 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces
         Task<ProductsModel> RegisterProduct(ProductsModel productsModel);
 
         Task<bool> UpdateProduct(ProductsModel productsModel);
+        Task<ProductsModel> UpdateProductStatus(string name, bool isActive);
 
         Task<ProductsModel> DeleteProduct(int id);
     }

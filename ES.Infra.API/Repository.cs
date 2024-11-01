@@ -1,4 +1,5 @@
 ﻿using ES.Domain.API.Interfaces.Repositories;
+using ES.Domain.API.Models;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -55,7 +56,6 @@ namespace ES.Infra.API
 
             return false;
         }
-
         public async Task<T> Delete(Expression<Func<T, bool>> expression)
         {
             if (expression != null)
@@ -71,6 +71,5 @@ namespace ES.Infra.API
             return null;
 
         }
-
     }
 }

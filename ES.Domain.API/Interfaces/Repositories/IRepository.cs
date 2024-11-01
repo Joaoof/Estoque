@@ -17,4 +17,4 @@ namespace ES.Domain.API.Interfaces.Repositories
 
         Task<T> Delete(Expression<Func<T, bool>> expression);
     }
-}
+}   

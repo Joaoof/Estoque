@@ -47,6 +47,16 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 
             return update;
         }
+        public async Task<ProductsModel> UpdateProductStatus(string name, bool isActive)
+        {
+            var product = await _productsRepository.GetAllAsync(p => p.Name == name);
+
+            var updateSucess = await _productsRepository.UpdateStatysAsync(product.First().Name, isActive);
+            await _unitOfWork.CommitAsync();
+
+            return updateSucess;
+            
+        }
 
         public async Task<ProductsModel> DeleteProduct(int id)
         {
@@ -55,5 +65,6 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 
             return delete;
         }
+
     }
 }

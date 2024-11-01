@@ -73,6 +73,23 @@ namespace ES.Application.API.Controllers
             return Ok(updateSucess);
         }
 
+        [HttpPut("{id}/status")]
+        public async Task<IActionResult> UpdateProductStatus(string name, bool isActive)
+        {
+            var product = await _productsAppService.GetInformationProduct(name);
+
+            product.IsActive = isActive;
+
+            var result = await _productsAppService.UpdateProduct(product);
+
+            if (!result)
+            {
+                return BadRequest(); // Retorna 400 se a atualização falhar
+            }
+
+            return NoContent();
+        }
+
         [HttpDelete]
         [Route("Deletar")]
         public async Task<IActionResult> DeleteProduct(int id)
@@ -80,6 +97,8 @@ namespace ES.Application.API.Controllers
             if (!ModelState.IsValid) return BadRequest();
 
             var delete = await _productsAppService.DeleteProduct(id);
+
+            Console.WriteLine(delete);
 
             if (delete is null) return NoContent();
 
