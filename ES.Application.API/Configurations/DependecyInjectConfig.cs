@@ -4,6 +4,8 @@ using ES.Infra.API.Context;
 using ES.Infra.API.Repositories;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Services;
+using IFA.Domain.API.Interfaces;
+using IFA.Infra.API;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +22,7 @@ namespace ES.Application.API.Configurations
 
             services.AddScoped<Func<EstoqueContext>>((provider) => () => provider.GetService<EstoqueContext>());
             services.AddScoped<DbFactory>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
         }

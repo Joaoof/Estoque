@@ -20,6 +20,13 @@ namespace ES.Infra.API
             get => _dbSet ??= _dbFactory.DbContext.Set<T>();
         }
 
+        public async Task<T> AddAsync(T entity)
+        {
+            await DbSet.AddAsync(entity);
+
+            return entity;
+        }
+
         public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
         {
             if (filter == null)

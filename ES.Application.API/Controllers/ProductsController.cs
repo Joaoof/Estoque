@@ -40,5 +40,18 @@ namespace ES.Application.API.Controllers
 
             return Ok(productsAll);
         }
+
+        [HttpPost]
+        [Route("Cadastro")]
+        public async Task<IActionResult> RegisterProducts(ProductsModel productsModel)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var register = await _productsAppService.RegisterProducts(productsModel);
+
+            if (register is null) return BadRequest();
+
+            return Ok(register);
+        }
     }
 }
