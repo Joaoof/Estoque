@@ -38,5 +38,14 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 
             return register;
         }
+
+        public async Task<bool> UpdateProducts(ProductsModel productsModel)
+        {
+            var update = await _productsRepository.UpdateAsync(productsModel);
+
+            await _unitOfWork.CommitAsync();
+
+            return update;
+        }
     }
 }

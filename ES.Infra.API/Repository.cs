@@ -20,13 +20,6 @@ namespace ES.Infra.API
             get => _dbSet ??= _dbFactory.DbContext.Set<T>();
         }
 
-        public async Task<T> AddAsync(T entity)
-        {
-            await DbSet.AddAsync(entity);
-
-            return entity;
-        }
-
         public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
         {
             if (filter == null)
@@ -37,5 +30,31 @@ namespace ES.Infra.API
                 return await DbSet.Where(filter).ToListAsync();
             }
         }
+        public async Task<T> AddAsync(T entity)
+        {
+            await DbSet.AddAsync(entity);
+
+            return entity;
+        }
+
+        public async Task<bool> UpdateAsync(T entity)
+        {
+            if (entity != null)
+            {
+                try
+                {
+                    var result = DbSet.Update(entity);
+
+                    return result.State == EntityState.Modified;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+            return false;
+        }
+
     }
 }

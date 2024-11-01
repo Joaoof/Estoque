@@ -53,5 +53,24 @@ namespace ES.Application.API.Controllers
 
             return Ok(register);
         }
+
+        [HttpPut]
+        [Route("Atualizar")]
+        public async Task<IActionResult> UpdateProducts(ProductsModel productsModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // Retorna BadRequest se o modelo não for válido
+            }
+
+            var updateSucess = await _productsAppService.UpdateProducts(productsModel);
+            
+            if(!updateSucess)
+            {
+                return NoContent();
+            }
+
+            return Ok(updateSucess);
+        }
     }
 }

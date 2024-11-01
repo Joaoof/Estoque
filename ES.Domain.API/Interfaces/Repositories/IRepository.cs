@@ -12,5 +12,7 @@ namespace ES.Domain.API.Interfaces.Repositories
         Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null);
 
         Task<T> AddAsync(T entity);
+
+        Task<bool> UpdateAsync(T entity);
     }
 }

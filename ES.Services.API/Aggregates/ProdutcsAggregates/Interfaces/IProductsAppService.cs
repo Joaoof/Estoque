@@ -10,5 +10,7 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces
         Task<List<ProductsModel>> GetInformationAllProducts();
 
         Task<ProductsModel> RegisterProducts(ProductsModel productsModel);
+
+        Task<bool> UpdateProducts(ProductsModel productsModel);
     }
 }
