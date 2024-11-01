@@ -15,19 +15,6 @@ namespace ES.Application.API.Controllers
             _productsAppService = productsAppServices;
         }
 
-        [HttpGet("{name}")]
-        public async Task<IActionResult> GetInformationProduct(string name, string skucode, bool isValid)
-        {
-            var products = await _productsAppService.GetInformationProduct(name, skucode, isValid);
-
-            if (products == null)
-            {
-                return NoContent();
-            }
-
-            return Ok(products);
-        }
-
         [HttpGet()]
         public async Task<IActionResult> GetInformationAllProducts()
         {
@@ -40,6 +27,30 @@ namespace ES.Application.API.Controllers
 
             return Ok(productsAll);
         }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetInformationProductId(int id)
+        {
+            var product = await _productsAppService.GetInformationProductId(id);
+
+            if (product == null) return NoContent();
+
+            return Ok(product);
+        }
+
+        [HttpGet("name/{name}")]
+        public async Task<IActionResult> GetInformationProduct(string name, string skucode, bool isValid)
+        {
+            var products = await _productsAppService.GetInformationProduct(name, skucode, isValid);
+
+            if (products == null)
+            {
+                return NoContent();
+            }
+
+            return Ok(products);
+        }
+
 
         [HttpPost]
         [Route("Cadastro")]

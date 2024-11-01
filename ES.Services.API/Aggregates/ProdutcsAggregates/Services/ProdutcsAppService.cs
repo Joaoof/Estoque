@@ -16,6 +16,12 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
             _productsRepository = productsRepository;
             _unitOfWork = unitOfWork;
         }
+        public async Task<List<ProductsModel>> GetInformationAllProducts()
+        {
+            var productsAll = await _productsRepository.GetAllAsync();
+
+            return productsAll;
+        }
 
         public async Task<ProductsModel> GetInformationProduct(string name, string skucode, bool isValid)
         {
@@ -24,12 +30,13 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
             return products;
         }
 
-        public async Task<List<ProductsModel>> GetInformationAllProducts()
+        public async Task<ProductsModel> GetInformationProductId(int id)
         {
-            var productsAll = await _productsRepository.GetAllAsync();
+            var products = await _productsRepository.GetById(id);
 
-            return productsAll;
+            return products;
         }
+
 
         public async Task<ProductsModel> RegisterProduct(ProductsModel productsModel)
         {

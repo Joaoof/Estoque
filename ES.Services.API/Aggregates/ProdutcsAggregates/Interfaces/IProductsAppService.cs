@@ -5,9 +5,10 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces
 {
     public interface IProductsAppService
     {
+        Task<List<ProductsModel>> GetInformationAllProducts();
         Task<ProductsModel> GetInformationProduct(string name, string skucode, bool isValid);
 
-        Task<List<ProductsModel>> GetInformationAllProducts();
+        Task<ProductsModel> GetInformationProductId(int id);
 
         Task<ProductsModel> RegisterProduct(ProductsModel productsModel);
 
