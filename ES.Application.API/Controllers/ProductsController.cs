@@ -1,4 +1,5 @@
-﻿using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
+﻿using ES.Domain.API.Models;
+using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ES.Application.API.Controllers
@@ -14,10 +15,10 @@ namespace ES.Application.API.Controllers
             _productsAppService = productsAppServices;
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetInformationProducts(int id)
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetInformationProducts(string name)
         {
-            var products = await _productsAppService.GetInformationProducts(id);
+            var products = await _productsAppService.GetInformationProducts(name);
 
             if (products == null)
             {
@@ -25,6 +26,19 @@ namespace ES.Application.API.Controllers
             }
 
             return Ok(products);
+        }
+
+        [HttpGet()]
+        public async Task<IActionResult> GetInformationAllProducts()
+        {
+            var productsAll = await _productsAppService.GetInformationAllProducts();
+
+            if (productsAll == null)
+            {
+                return NoContent();
+            }
+
+            return Ok(productsAll);
         }
     }
 }

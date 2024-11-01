@@ -27,7 +27,7 @@ namespace ES.Application.API.Configurations
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             return services
-                .AddScoped(typeof(IProductsRepository), typeof(ProductsRepository));
+                .AddScoped(typeof(IProductsRepository), typeof(ProductsRepository)).AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
         }
 

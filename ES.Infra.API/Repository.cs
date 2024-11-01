@@ -1,21 +1,34 @@
 ﻿using ES.Domain.API.Interfaces.Repositories;
 using IFA.Infra.API.Context;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace ES.Infra.API
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private DbFactory dbFactory;
+        private DbFactory _dbFactory;
+        private DbSet<T> _dbSet;
 
         public Repository(DbFactory dbFactory)
         {
-            this.dbFactory = dbFactory;
+            _dbFactory = dbFactory;
         }
 
-        public Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null)
+        protected DbSet<T> DbSet
         {
-            throw new NotImplementedException();
+            get => _dbSet ??= _dbFactory.DbContext.Set<T>();
+        }
+
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
+        {
+            if (filter == null)
+            {
+                return await DbSet.ToListAsync();
+            } else
+            {
+                return await DbSet.Where(filter).ToListAsync();
+            }
         }
     }
 }

@@ -15,9 +15,10 @@ namespace ES.Infra.API.Repositories
             _DbsetPessoa = dbFactory.DbContext.Set<ProductsModel>();
         }
 
-        public async Task<ProductsModel> GetId(int id)
+        public async Task<ProductsModel> GetByName(string name)
         {
-            return await _DbsetPessoa.AsNoTracking().FirstAsync(x => x.Id == id);
+            return await _DbsetPessoa.Where(x  => x.Name == name).AsNoTracking().FirstOrDefaultAsync();
         }
+
     }
 }

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ES.Domain.API.Interfaces.Repositories
 {
-    public interface IProductsRepository
+    public interface IProductsRepository : IRepository<ProductsModel>
     {
-        Task<ProductsModel> GetId (int id);
+        Task<ProductsModel> GetByName (string name);
     }
 }

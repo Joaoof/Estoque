@@ -9,6 +9,8 @@ namespace ES.Domain.API.Interfaces.Repositories
 {
     public interface IRepository<T> where T : class
     {
-        Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null); 
+        Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null);
+
+        Task<T> AddAsync(T entity);
     }
 }
