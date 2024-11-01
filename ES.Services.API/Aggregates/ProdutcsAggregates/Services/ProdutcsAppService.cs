@@ -17,7 +17,7 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<ProductsModel> GetInformationProducts(string name)
+        public async Task<ProductsModel> GetInformationProduct(string name)
         {
             var products = await _productsRepository.GetByName(name);
 
@@ -31,7 +31,7 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
             return productsAll;
         }
 
-        public async Task<ProductsModel> RegisterProducts(ProductsModel productsModel)
+        public async Task<ProductsModel> RegisterProduct(ProductsModel productsModel)
         {
             var register = await _productsRepository.AddAsync(productsModel);
             await _unitOfWork.CommitAsync();
@@ -39,13 +39,21 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
             return register;
         }
 
-        public async Task<bool> UpdateProducts(ProductsModel productsModel)
+        public async Task<bool> UpdateProduct(ProductsModel productsModel)
         {
             var update = await _productsRepository.UpdateAsync(productsModel);
 
             await _unitOfWork.CommitAsync();
 
             return update;
+        }
+
+        public async Task<ProductsModel> DeleteProduct(int id)
+        {
+            var delete = await _productsRepository.Delete(x => x.Id == id);
+            await _unitOfWork.CommitAsync();
+
+            return delete;
         }
     }
 }

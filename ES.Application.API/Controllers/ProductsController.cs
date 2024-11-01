@@ -16,9 +16,9 @@ namespace ES.Application.API.Controllers
         }
 
         [HttpGet("{name}")]
-        public async Task<IActionResult> GetInformationProducts(string name)
+        public async Task<IActionResult> GetInformationProduct(string name)
         {
-            var products = await _productsAppService.GetInformationProducts(name);
+            var products = await _productsAppService.GetInformationProduct(name);
 
             if (products == null)
             {
@@ -43,11 +43,11 @@ namespace ES.Application.API.Controllers
 
         [HttpPost]
         [Route("Cadastro")]
-        public async Task<IActionResult> RegisterProducts(ProductsModel productsModel)
+        public async Task<IActionResult> RegisterProduct(ProductsModel productsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var register = await _productsAppService.RegisterProducts(productsModel);
+            var register = await _productsAppService.RegisterProduct(productsModel);
 
             if (register is null) return BadRequest();
 
@@ -56,14 +56,14 @@ namespace ES.Application.API.Controllers
 
         [HttpPut]
         [Route("Atualizar")]
-        public async Task<IActionResult> UpdateProducts(ProductsModel productsModel)
+        public async Task<IActionResult> UpdateProduct(ProductsModel productsModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState); // Retorna BadRequest se o modelo não for válido
             }
 
-            var updateSucess = await _productsAppService.UpdateProducts(productsModel);
+            var updateSucess = await _productsAppService.UpdateProduct(productsModel);
             
             if(!updateSucess)
             {
@@ -71,6 +71,19 @@ namespace ES.Application.API.Controllers
             }
 
             return Ok(updateSucess);
+        }
+
+        [HttpDelete]
+        [Route("Deletar")]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            if (!ModelState.IsValid) return BadRequest();
+
+            var delete = await _productsAppService.DeleteProduct(id);
+
+            if (delete is null) return NoContent();
+
+            return Ok(delete);
         }
     }
 }

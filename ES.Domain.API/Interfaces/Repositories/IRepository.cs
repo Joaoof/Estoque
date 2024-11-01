@@ -14,5 +14,7 @@ namespace ES.Domain.API.Interfaces.Repositories
         Task<T> AddAsync(T entity);
 
         Task<bool> UpdateAsync(T entity);
+
+        Task<T> Delete(Expression<Func<T, bool>> expression);
     }
 }

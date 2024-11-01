@@ -5,12 +5,14 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces
 {
     public interface IProductsAppService
     {
-        Task<ProductsModel> GetInformationProducts(string name);
+        Task<ProductsModel> GetInformationProduct(string name);
 
         Task<List<ProductsModel>> GetInformationAllProducts();
 
-        Task<ProductsModel> RegisterProducts(ProductsModel productsModel);
+        Task<ProductsModel> RegisterProduct(ProductsModel productsModel);
 
-        Task<bool> UpdateProducts(ProductsModel productsModel);
+        Task<bool> UpdateProduct(ProductsModel productsModel);
+
+        Task<ProductsModel> DeleteProduct(int id);
     }
 }

@@ -56,5 +56,21 @@ namespace ES.Infra.API
             return false;
         }
 
+        public async Task<T> Delete(Expression<Func<T, bool>> expression)
+        {
+            if (expression != null)
+            {
+                var itemDelete = await DbSet.FirstOrDefaultAsync(expression);
+                if (itemDelete != null)
+                {
+                    DbSet.Remove(itemDelete);
+                }
+                return itemDelete;
+            }
+
+            return null;
+
+        }
+
     }
 }
