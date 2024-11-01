@@ -9,8 +9,7 @@ namespace ES.Domain.API.Interfaces.Repositories
 {
     public interface IProductsRepository : IRepository<ProductsModel>
     {
-        Task<ProductsModel> GetByName (string name);
-
+        Task<ProductsModel> GetByProduct(string name, string skucode, bool isValid);
         Task<ProductsModel> UpdateStatysAsync(string name, bool isActive);
     }
 }

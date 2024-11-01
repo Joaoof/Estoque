@@ -17,9 +17,9 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<ProductsModel> GetInformationProduct(string name)
+        public async Task<ProductsModel> GetInformationProduct(string name, string skucode, bool isValid)
         {
-            var products = await _productsRepository.GetByName(name);
+            var products = await _productsRepository.GetByProduct(name, skucode, isValid);
 
             return products;
         }

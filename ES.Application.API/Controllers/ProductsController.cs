@@ -16,9 +16,9 @@ namespace ES.Application.API.Controllers
         }
 
         [HttpGet("{name}")]
-        public async Task<IActionResult> GetInformationProduct(string name)
+        public async Task<IActionResult> GetInformationProduct(string name, string skucode, bool isValid)
         {
-            var products = await _productsAppService.GetInformationProduct(name);
+            var products = await _productsAppService.GetInformationProduct(name, skucode, isValid);
 
             if (products == null)
             {
@@ -73,10 +73,10 @@ namespace ES.Application.API.Controllers
             return Ok(updateSucess);
         }
 
-        [HttpPut("{id}/status")]
-        public async Task<IActionResult> UpdateProductStatus(string name, bool isActive)
+        [HttpPut("{name}/status")]
+        public async Task<IActionResult> UpdateProductStatus(string name, string skucode, bool isActive)
         {
-            var product = await _productsAppService.GetInformationProduct(name);
+            var product = await _productsAppService.GetInformationProduct(name, skucode, isActive);
 
             product.IsActive = isActive;
 
