@@ -8,6 +8,7 @@ using IFA.Domain.API.Interfaces;
 using IFA.Infra.API;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace ES.Application.API.Configurations
 {
@@ -37,6 +38,19 @@ namespace ES.Application.API.Configurations
         public static IServiceCollection AddServices(this IServiceCollection services, ConfigurationManager _configuration)
         {
             return services.AddScoped<IProductsAppService, ProductsAppService>();
+        }
+
+        public static IServiceCollection AddCors(this IServiceCollection services, ConfigurationManager _configuration)
+        {
+            var allowedOrigins = _configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
+
+            return services.AddCors(options =>
+            {
+                options.AddPolicy("Default", builder =>
+                {
+                    builder.WithOrigins(allowedOrigins).AllowAnyOrigin().AllowAnyMethod();
+                });
+            });
         }
     }
 }
