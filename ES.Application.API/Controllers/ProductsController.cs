@@ -87,6 +87,8 @@ namespace ES.Application.API.Controllers
         [HttpPut("{name}/status")]
         public async Task<IActionResult> UpdateProductStatus(string name, string skucode, bool isActive)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var product = await _productsAppService.GetInformationProduct(name, skucode, isActive);
 
             product.IsActive = isActive;

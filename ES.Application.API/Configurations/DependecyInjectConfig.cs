@@ -4,6 +4,10 @@ using ES.Infra.API.Context;
 using ES.Infra.API.Repositories;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Services;
+using ES.Services.API.FilterMessage;
+using ES.Services.API.Validation.Products;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using IFA.Domain.API.Interfaces;
 using IFA.Infra.API;
 using IFA.Infra.API.Context;
@@ -14,6 +18,16 @@ namespace ES.Application.API.Configurations
 {
     public static class DependecyInjectConfig
     {
+        public static IServiceCollection ConfigureServices(this IServiceCollection services)
+        {
+            services.AddControllers();
+
+            services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ProductsModelValidator>());
+
+
+            return services;
+        }
+
         public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<EstoqueContext>(options =>
