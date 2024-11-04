@@ -38,7 +38,7 @@ namespace ES.Application.API.Controllers
             return Ok(product);
         }
 
-        [HttpGet("name/{name}")]
+        [HttpGet("search")]
         public async Task<IActionResult> GetInformationProduct(string name, string skucode, bool isValid)
         {
             var products = await _productsAppService.GetInformationProduct(name, skucode, isValid);

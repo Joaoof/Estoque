@@ -2,7 +2,6 @@ using ES.Application.API.Configurations;
 using ES.Infra.API.Context;
 //using ES.Services.API.FilterMessage;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
