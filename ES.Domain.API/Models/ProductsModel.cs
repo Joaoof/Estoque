@@ -39,7 +39,9 @@ namespace ES.Domain.API.Models
         public string UpdatedBy { get; set; }
         public DateTime UpdatedDate { get; set; }
 
+        [Required]
         public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
         public virtual CategoriesModel Categories { get; set; }
     }
 }
