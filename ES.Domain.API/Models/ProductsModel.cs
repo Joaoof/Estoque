@@ -40,5 +40,6 @@ namespace ES.Domain.API.Models
         public DateTime UpdatedDate { get; set; }
 
         public int CategoryId { get; set; }
+        public virtual CategoriesModel Categories { get; set; }
     }
 }

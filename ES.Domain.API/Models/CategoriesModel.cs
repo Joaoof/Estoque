@@ -16,6 +16,6 @@ namespace ES.Domain.API.Models
         public string Description { get; set; }
     
 
-        public int ProductId { get; set; }
+        public virtual ICollection<ProductsModel> Products { get; set; }
     }
 }
