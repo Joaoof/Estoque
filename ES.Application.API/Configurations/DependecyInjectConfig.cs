@@ -4,15 +4,12 @@ using ES.Infra.API.Context;
 using ES.Infra.API.Repositories;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Services;
-using ES.Services.API.FilterMessage;
 using ES.Services.API.Validation.Products;
-using FluentValidation;
 using FluentValidation.AspNetCore;
 using IFA.Domain.API.Interfaces;
 using IFA.Infra.API;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace ES.Application.API.Configurations
 {
