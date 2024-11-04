@@ -7,15 +7,24 @@ namespace ES.Infra.API.Context
     {
         public DbSet<ProductsModel> Products { get; set; }
 
+        public DbSet<CategoriesModel> Categories { get; set; }
+
         public EstoqueContext(DbContextOptions<EstoqueContext> options) : base(options)
         {
 
         }
 
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.HasDefaultSchema("public"); // Especifica o schema padrão como "public"
+        //    base.OnModelCreating(modelBuilder);
+        //}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("public"); // Especifica o schema padrão como "public"
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<CategoriesModel>().HasMany(category => category.Products).WithOne(Products => Products.Categories).HasForeignKey(product => product.CategoryId);
         }
 
     }
