@@ -1,6 +1,8 @@
-﻿using ES.Domain.API.Interfaces.Repositories;
+﻿using AutoMapper;
+using ES.Domain.API.Interfaces.Repositories;
 using ES.Domain.API.Models;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
+using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Request;
 using IFA.Domain.API.Interfaces;
 using System.Linq.Expressions;
 
@@ -10,11 +12,13 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
     {
         private readonly IProductsRepository _productsRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public ProductsAppService(IProductsRepository productsRepository, IUnitOfWork unitOfWork)
+        public ProductsAppService(IProductsRepository productsRepository, IUnitOfWork unitOfWork, IMapper mapper)
         {
             _productsRepository = productsRepository;
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         public async Task<List<ProductsModel>> GetInformationAllProducts()
         {
@@ -38,9 +42,11 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         }
 
 
-        public async Task<ProductsModel> RegisterProduct(ProductsModel productsModel)
+        public async Task<ProductsModel> RegisterProduct(ProductsViewModel productsViewModels)
         {
-            var register = await _productsRepository.AddAsync(productsModel);
+            var registerProduct = _mapper.Map<ProductsModel>(productsViewModels);
+
+            var register = await _productsRepository.AddAsync(registerProduct);
             await _unitOfWork.CommitAsync();
 
             return register;

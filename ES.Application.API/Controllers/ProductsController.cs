@@ -1,5 +1,6 @@
 ﻿using ES.Domain.API.Models;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
+using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ES.Application.API.Controllers
@@ -54,11 +55,11 @@ namespace ES.Application.API.Controllers
 
         [HttpPost]
         [Route("Cadastro")]
-        public async Task<IActionResult> RegisterProduct(ProductsModel productsModel)
+        public async Task<IActionResult> RegisterProduct(ProductsViewModel productsViewModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var register = await _productsAppService.RegisterProduct(productsModel);
+            var register = await _productsAppService.RegisterProduct(productsViewModel);
 
             if (register is null) return BadRequest();
 

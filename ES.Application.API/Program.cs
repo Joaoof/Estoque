@@ -27,6 +27,8 @@ builder.Services.AddServices(_configuration);
 
 builder.Services.AddCors(_configuration);
 
+builder.Services.AddAutoMapperConfiguration();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -33,10 +33,13 @@ namespace ES.Domain.API.Models
 
         [Required]
         public bool IsActive { get; set; }
+        public string CreatedBy { get; set; } = "Admin";
 
-        public string CreatedBy { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public string UpdatedBy { get; set; }
+        [DisplayFormat(DataFormatString = "mm/dd/yyyy")]
+        public DateTime CreatedDate { get; set; } 
+        public string UpdatedBy { get; set; } = "Admin";
+
+        [DisplayFormat(DataFormatString = "mm/dd/yyyy")]
         public DateTime UpdatedDate { get; set; }
 
         [Required]
