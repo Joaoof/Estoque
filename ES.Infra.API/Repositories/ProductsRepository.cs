@@ -17,7 +17,7 @@ namespace ES.Infra.API.Repositories
 
         public async Task<ProductsModel> GetById(int id)
         {
-            var product = await DbSet.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+            var product = await DbSet.AsNoTracking().Include(p => p.Categories).FirstOrDefaultAsync(p => p.Id == id);
 
             return product;
         }

@@ -3,6 +3,7 @@ using ES.Domain.API.Interfaces.Repositories;
 using ES.Domain.API.Models;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Request;
+using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response;
 using IFA.Domain.API.Interfaces;
 using System.Linq.Expressions;
 
@@ -42,14 +43,19 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         }
 
 
-        public async Task<ProductsModel> RegisterProduct(ProductsViewModel productsViewModels)
+        public async Task<ProductsViewModelResponse> RegisterProduct(ProductsViewModel productsViewModels)
         {
             var registerProduct = _mapper.Map<ProductsModel>(productsViewModels);
 
             var register = await _productsRepository.AddAsync(registerProduct);
             await _unitOfWork.CommitAsync();
 
-            return register;
+            var registeredProductWithCategory = await _productsRepository.GetById(registerProduct.Id);
+
+            var registerProductResponse = _mapper.Map<ProductsViewModelResponse>(registeredProductWithCategory);
+
+
+            return registerProductResponse;
         }
 
         public async Task<bool> UpdateProduct(ProductsModel productsModel)

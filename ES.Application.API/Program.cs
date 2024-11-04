@@ -2,15 +2,30 @@ using ES.Application.API.Configurations;
 using ES.Infra.API.Context;
 //using ES.Services.API.FilterMessage;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Text.Json.Serialization;   
 
 var builder = WebApplication.CreateBuilder(args);
 
 var _configuration = builder.Configuration;
 
+var options = new JsonSerializerOptions
+{
+    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+};
+
 // Add services to the container.
 
 builder.Services.ConfigureServices();
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+});
+
+builder.Services.AddControllers().AddNewtonsoftJson(options  =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

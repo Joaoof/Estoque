@@ -14,7 +14,6 @@ namespace ES.Domain.API.Models
 
         [Required]
         public string Description { get; set; }
-    
 
         public virtual ICollection<ProductsModel> Products { get; set; }
     }
