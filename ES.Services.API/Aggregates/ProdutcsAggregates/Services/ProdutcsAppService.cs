@@ -6,6 +6,8 @@ using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Request;
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response;
 using IFA.Domain.API.Interfaces;
 using ES.Services.API.Common;
+using ES.Services.API.Helpers;
+using ES.Services.API.Helpers.Interfaces;
 
 namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 {
@@ -15,13 +17,15 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         private readonly ICategoriesRepository _categoriesRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly ISkuGenerator _skuGenerator;
 
-        public ProductsAppService(IProductsRepository productsRepository, ICategoriesRepository categoriesRepository, IUnitOfWork unitOfWork, IMapper mapper)
+        public ProductsAppService(IProductsRepository productsRepository, ICategoriesRepository categoriesRepository, IUnitOfWork unitOfWork, IMapper mapper, ISkuGenerator skuGenerator)
         {
             _productsRepository = productsRepository;
             _categoriesRepository = categoriesRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _skuGenerator = skuGenerator;
         }
         public async Task<List<ProductsModel>> GetInformationAllProducts()
         {
@@ -48,8 +52,10 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         public async Task<ServiceResponse<ProductsViewModelResponse>> RegisterProduct(ProductsViewModel productsViewModels)
         {
             var response = new ServiceResponse<ProductsViewModelResponse>();
-
-
+            
+            // se a string for vazia ou nulla, gera um SKUCODE, se não for pega a que está sendo add manualmente
+            productsViewModels.SKUCode = string.IsNullOrEmpty(productsViewModels.SKUCode) ? await _skuGenerator.GenerateUniqueSkuAsync() : productsViewModels.SKUCode;
+            
             var isSkuUnique = await _productsRepository.IsSkuUniqueAsync(productsViewModels.SKUCode);
 
             if (!isSkuUnique)

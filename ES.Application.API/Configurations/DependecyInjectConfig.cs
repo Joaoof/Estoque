@@ -6,6 +6,8 @@ using ES.Services.API.Aggregates.CategoriesAggregates.Interfaces;
 using ES.Services.API.Aggregates.CategoriesAggregates.Services;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Services;
+using ES.Services.API.Helpers;
+using ES.Services.API.Helpers.Interfaces;
 using ES.Services.API.Validation.Products;
 using FluentValidation.AspNetCore;
 using IFA.Domain.API.Interfaces;
@@ -53,7 +55,8 @@ namespace ES.Application.API.Configurations
         public static IServiceCollection AddServices(this IServiceCollection services, ConfigurationManager _configuration)
         {
             return services.AddScoped<IProductsAppService, ProductsAppService>()
-                .AddScoped<ICategoriesAppService, CategoriesAppService>();
+                .AddScoped<ICategoriesAppService, CategoriesAppService>()
+                .AddScoped<ISkuGenerator, SkuGenerator>();
         }
 
         public static IServiceCollection AddCors(this IServiceCollection services, ConfigurationManager _configuration)
