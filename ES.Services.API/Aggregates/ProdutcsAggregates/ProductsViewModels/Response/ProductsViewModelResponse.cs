@@ -21,6 +21,6 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Respo
 
         public int CategoryId { get; set; }
 
-        public virtual CategoriesModel Categories { get; set; }
+        public virtual CategoriesViewModelResponse Category { get; set; }
     }
 }

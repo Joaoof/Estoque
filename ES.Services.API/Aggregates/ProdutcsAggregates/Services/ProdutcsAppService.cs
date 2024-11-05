@@ -5,7 +5,7 @@ using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Request;
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response;
 using IFA.Domain.API.Interfaces;
-using System.Linq.Expressions;
+using ES.Services.API.Common;
 
 namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 {
@@ -43,9 +43,20 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         }
 
 
-        public async Task<ProductsViewModelResponse> RegisterProduct(ProductsViewModel productsViewModels)
+        public async Task<ServiceResponse<ProductsViewModelResponse>> RegisterProduct(ProductsViewModel productsViewModels)
         {
-            var registerProduct = _mapper.Map<ProductsModel>(productsViewModels);
+            var response = new ServiceResponse<ProductsViewModelResponse>();
+
+            var isSkuUnique = await _productsRepository.IsSkuUniqueAsync(productsViewModels.SKUCode);
+
+            if (!isSkuUnique)
+            {
+                response.Success = false; 
+                response.Message = "SKU já existe.";
+                return response;
+            }
+     
+           var registerProduct = _mapper.Map<ProductsModel>(productsViewModels);
 
             var register = await _productsRepository.AddAsync(registerProduct);
             await _unitOfWork.CommitAsync();
@@ -54,8 +65,10 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 
             var registerProductResponse = _mapper.Map<ProductsViewModelResponse>(registeredProductWithCategory);
 
+            response.Data = registerProductResponse; 
+            response.Success = true; 
+            return response;
 
-            return registerProductResponse;
         }
 
         public async Task<bool> UpdateProduct(ProductsModel productsModel)

@@ -9,6 +9,9 @@ namespace ES.Domain.API.Interfaces.Repositories
 
         //Task<ProductsModel> AddProductAsync(ProductsViewModel productsViewModel);
 
+        Task<bool> IsSkuUniqueAsync(string skuCode);
+
+
         Task<ProductsModel> UpdateStatysAsync(string name, bool isActive);
     }
 }

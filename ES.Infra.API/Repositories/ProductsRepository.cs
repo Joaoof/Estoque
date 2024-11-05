@@ -39,5 +39,10 @@ namespace ES.Infra.API.Repositories
             return product; // Retorno indicando sucesso na atualização
         }
 
+        public async Task<bool> IsSkuUniqueAsync(string skucode)
+        {
+            return !await _DbsetPessoa.AnyAsync(p => p.SKUCode == skucode);
+        }
+
     }
 }

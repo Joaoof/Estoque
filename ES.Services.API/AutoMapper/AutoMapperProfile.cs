@@ -12,7 +12,10 @@ namespace ES.Services.API.AutoMapper
             CreateMap<ProductsModel, ProductsViewModel>().ReverseMap();
 
             CreateMap<ProductsModel, ProductsViewModelResponse>()
-               .ForMember(dest => dest.Categories, opt => opt.MapFrom(src => src.Categories)); // Supondo que a propriedade Category exista em ProductsModel
+               .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Categories)); // Supondo que a propriedade Category exista em ProductsModel
+
+            CreateMap<CategoriesModel, CategoriesViewModelResponse>();
+
         }
     }
 }
