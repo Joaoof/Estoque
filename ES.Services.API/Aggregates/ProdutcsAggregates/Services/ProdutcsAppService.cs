@@ -49,7 +49,6 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         {
             var response = new ServiceResponse<ProductsViewModelResponse>();
 
-            var searchAllCategories = await _categoriesRepository.GetAllCategoriesAsync();
 
             var isSkuUnique = await _productsRepository.IsSkuUniqueAsync(productsViewModels.SKUCode);
 
@@ -59,6 +58,8 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
                 response.Message = "SKU já existe.";
                 return response;
             }
+
+            var searchAllCategories = await _categoriesRepository.GetAllCategoriesAsync();
      
            var registerProduct = _mapper.Map<ProductsModel>(productsViewModels);
 

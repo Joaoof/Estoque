@@ -2,6 +2,8 @@
 using ES.Infra.API;
 using ES.Infra.API.Context;
 using ES.Infra.API.Repositories;
+using ES.Services.API.Aggregates.CategoriesAggregates.Interfaces;
+using ES.Services.API.Aggregates.CategoriesAggregates.Services;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Services;
 using ES.Services.API.Validation.Products;
@@ -42,13 +44,16 @@ namespace ES.Application.API.Configurations
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             return services
-                .AddScoped(typeof(IProductsRepository), typeof(ProductsRepository)).AddScoped(typeof(IRepository<>), typeof(Repository<>));
+                .AddScoped(typeof(IProductsRepository), typeof(ProductsRepository))
+                .AddScoped(typeof(ICategoriesRepository), typeof(CategoriesRepository))
+                .AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
         }
 
         public static IServiceCollection AddServices(this IServiceCollection services, ConfigurationManager _configuration)
         {
-            return services.AddScoped<IProductsAppService, ProductsAppService>();
+            return services.AddScoped<IProductsAppService, ProductsAppService>()
+                .AddScoped<ICategoriesAppService, CategoriesAppService>();
         }
 
         public static IServiceCollection AddCors(this IServiceCollection services, ConfigurationManager _configuration)
