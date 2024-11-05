@@ -12,12 +12,14 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
     public class ProductsAppService : IProductsAppService
     {
         private readonly IProductsRepository _productsRepository;
+        private readonly ICategoriesRepository _categoriesRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ProductsAppService(IProductsRepository productsRepository, IUnitOfWork unitOfWork, IMapper mapper)
+        public ProductsAppService(IProductsRepository productsRepository, ICategoriesRepository categoriesRepository, IUnitOfWork unitOfWork, IMapper mapper)
         {
             _productsRepository = productsRepository;
+            _categoriesRepository = categoriesRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
@@ -46,6 +48,8 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         public async Task<ServiceResponse<ProductsViewModelResponse>> RegisterProduct(ProductsViewModel productsViewModels)
         {
             var response = new ServiceResponse<ProductsViewModelResponse>();
+
+            var searchAllCategories = await _categoriesRepository.GetAllCategoriesAsync();
 
             var isSkuUnique = await _productsRepository.IsSkuUniqueAsync(productsViewModels.SKUCode);
 
