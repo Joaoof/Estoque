@@ -1,7 +1,10 @@
 using ES.Application.API.Configurations;
 using ES.Infra.API.Context;
+using Microsoft.AspNetCore.Identity;
+
 //using ES.Services.API.FilterMessage;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
 using System.Text.Json.Serialization;   
 
@@ -41,6 +44,8 @@ builder.Services.AddRepositories();
 builder.Services.AddServices(_configuration);
 
 builder.Services.AddCors(_configuration);
+
+builder.Services.AddIdentityCore<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<EstoqueContext>();
 
 builder.Services.AddAutoMapperConfiguration();
 
