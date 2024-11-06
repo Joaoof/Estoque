@@ -13,6 +13,7 @@ using FluentValidation.AspNetCore;
 using IFA.Domain.API.Interfaces;
 using IFA.Infra.API;
 using IFA.Infra.API.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace ES.Application.API.Configurations
@@ -70,6 +71,11 @@ namespace ES.Application.API.Configurations
                     builder.WithOrigins(allowedOrigins).AllowAnyOrigin().AllowAnyMethod();
                 });
             });
+        }
+
+        public static IServiceCollection AddAuth(this IServiceCollection services)
+        {
+            return (IServiceCollection)services.AddIdentityCore<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<EstoqueContext>();
         }
     }
 }
