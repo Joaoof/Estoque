@@ -3,6 +3,7 @@ using System;
 using ES.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ES.Infra.API.Migrations
 {
     [DbContext(typeof(EstoqueContext))]
-    partial class EstoqueContextModelSnapshot : ModelSnapshot
+    [Migration("20241107201958_IdentityModels")]
+    partial class IdentityModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,22 +43,6 @@ namespace ES.Infra.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categorias", "estoque");
-                });
-
-            modelBuilder.Entity("ES.Domain.API.Models.LoginModel", b =>
-                {
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("RememberMe")
-                        .HasColumnType("boolean");
-
-                    b.ToTable("Login");
                 });
 
             modelBuilder.Entity("ES.Domain.API.Models.ProductsModel", b =>
@@ -120,23 +106,6 @@ namespace ES.Infra.API.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Produtos", "estoque");
-                });
-
-            modelBuilder.Entity("ES.Domain.API.Models.RegisterModel", b =>
-                {
-                    b.Property<string>("ConfirmPassword")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.ToTable("Register");
                 });
 
             modelBuilder.Entity("ES.Domain.API.Models.UserRolesModel", b =>

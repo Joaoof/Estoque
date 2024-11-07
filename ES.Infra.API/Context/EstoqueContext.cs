@@ -12,6 +12,10 @@ namespace ES.Infra.API.Context
 
         public DbSet<UsersModel> Users { get; set; }
 
+        public DbSet<RegisterModel> Register { get; set; }
+
+        public DbSet<LoginModel> Login { get; set; }
+
         public EstoqueContext(DbContextOptions<EstoqueContext> options) : base(options)
         {
 
@@ -46,6 +50,11 @@ namespace ES.Infra.API.Context
                 Password = "admin",
                 UserRoleId = 1,
             });
+
+            modelBuilder.Entity<RegisterModel>().HasNoKey();
+            modelBuilder.Entity<LoginModel>().HasNoKey();
+
+
         }
 
     }
