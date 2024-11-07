@@ -1,14 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ES.Domain.API.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace ES.Infra.API.Context
 {
-    public class EstoqueContext : DbContext
+    public class EstoqueContext : IdentityDbContext
     {
         public DbSet<ProductsModel> Products { get; set; }
 
         public DbSet<CategoriesModel> Categories { get; set; }
-
+            
         public DbSet<UsersModel> Users { get; set; }
 
         public EstoqueContext(DbContextOptions<EstoqueContext> options) : base(options)

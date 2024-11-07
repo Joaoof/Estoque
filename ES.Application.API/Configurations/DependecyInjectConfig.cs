@@ -37,6 +37,8 @@ namespace ES.Application.API.Configurations
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("ES.Application.API"));
             });
 
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<EstoqueContext>();
+
             services.AddScoped<Func<EstoqueContext>>((provider) => () => provider.GetService<EstoqueContext>());
             services.AddScoped<DbFactory>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
