@@ -1,6 +1,5 @@
 ﻿using ES.Domain.API.Interfaces.Repositories;
 using ES.Services.API.Helpers.Interfaces;
-using System.Text;
 
 namespace ES.Services.API.Helpers
 {

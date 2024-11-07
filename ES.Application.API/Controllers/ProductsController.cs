@@ -76,8 +76,8 @@ namespace ES.Application.API.Controllers
             }
 
             var updateSucess = await _productsAppService.UpdateProduct(productsModel);
-            
-            if(!updateSucess)
+
+            if (!updateSucess)
             {
                 return NoContent();
             }

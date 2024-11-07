@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ES.Domain.API.Models;
+﻿using ES.Domain.API.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace ES.Infra.API.Context
 {
@@ -9,7 +9,7 @@ namespace ES.Infra.API.Context
         public DbSet<ProductsModel> Products { get; set; }
 
         public DbSet<CategoriesModel> Categories { get; set; }
-            
+
         public DbSet<UsersModel> Users { get; set; }
 
         public EstoqueContext(DbContextOptions<EstoqueContext> options) : base(options)

@@ -1,6 +1,4 @@
-﻿using ES.Domain.API.Models;
-
-namespace ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response
+﻿namespace ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response
 {
     public class ProductsViewModelResponse
     {

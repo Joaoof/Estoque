@@ -5,7 +5,7 @@ using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response;
 
 namespace ES.Services.API.AutoMapper
 {
-    public class AutoMapperProfile: Profile
+    public class AutoMapperProfile : Profile
     {
         public AutoMapperProfile()
         {

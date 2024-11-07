@@ -24,7 +24,7 @@ namespace ES.Infra.API.Repositories
 
         public async Task<ProductsModel> GetByProduct(string name, string skucode, bool isValid)
         {
-            return await _DbsetPessoa.Where(x  => x.Name == name).Where(x => x.SKUCode == skucode).Where(x => x.IsActive == isValid)
+            return await _DbsetPessoa.Where(x => x.Name == name).Where(x => x.SKUCode == skucode).Where(x => x.IsActive == isValid)
                 .AsNoTracking().FirstOrDefaultAsync();
         }
 

@@ -36,7 +36,7 @@ namespace ES.Domain.API.Models
         public string CreatedBy { get; set; } = "Admin";
 
         [DisplayFormat(DataFormatString = "mm/dd/yyyy")]
-        public DateTime CreatedDate { get; set; } 
+        public DateTime CreatedDate { get; set; }
         public string UpdatedBy { get; set; } = "Admin";
 
         [DisplayFormat(DataFormatString = "mm/dd/yyyy")]

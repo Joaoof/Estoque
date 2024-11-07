@@ -4,10 +4,9 @@ using ES.Domain.API.Models;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Request;
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response;
-using IFA.Domain.API.Interfaces;
 using ES.Services.API.Common;
-using ES.Services.API.Helpers;
 using ES.Services.API.Helpers.Interfaces;
+using IFA.Domain.API.Interfaces;
 
 namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 {
@@ -52,22 +51,22 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
         public async Task<ServiceResponse<ProductsViewModelResponse>> RegisterProduct(ProductsViewModel productsViewModels)
         {
             var response = new ServiceResponse<ProductsViewModelResponse>();
-            
+
             // se a string for vazia ou nulla, gera um SKUCODE, se não for pega a que está sendo add manualmente
             productsViewModels.SKUCode = string.IsNullOrEmpty(productsViewModels.SKUCode) ? await _skuGenerator.GenerateUniqueSkuAsync() : productsViewModels.SKUCode;
-            
+
             var isSkuUnique = await _productsRepository.IsSkuUniqueAsync(productsViewModels.SKUCode);
 
             if (!isSkuUnique)
             {
-                response.Success = false; 
+                response.Success = false;
                 response.Message = "SKU já existe.";
                 return response;
             }
 
             var searchAllCategories = await _categoriesRepository.GetAllCategoriesAsync();
-     
-           var registerProduct = _mapper.Map<ProductsModel>(productsViewModels);
+
+            var registerProduct = _mapper.Map<ProductsModel>(productsViewModels);
 
             var register = await _productsRepository.AddAsync(registerProduct);
             await _unitOfWork.CommitAsync();
@@ -76,8 +75,8 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
 
             var registerProductResponse = _mapper.Map<ProductsViewModelResponse>(registeredProductWithCategory);
 
-            response.Data = registerProductResponse; 
-            response.Success = true; 
+            response.Data = registerProductResponse;
+            response.Success = true;
             return response;
 
         }
@@ -98,7 +97,7 @@ namespace ES.Services.API.Aggregates.ProdutcsAggregates.Services
             await _unitOfWork.CommitAsync();
 
             return updateSucess;
-            
+
         }
 
         public async Task<ProductsModel> DeleteProduct(int id)

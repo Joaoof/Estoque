@@ -1,5 +1,5 @@
-﻿using FluentValidation;
-using ES.Domain.API.Models;
+﻿using ES.Domain.API.Models;
+using FluentValidation;
 
 namespace ES.Services.API.Validation.Products;
 

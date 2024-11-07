@@ -1,5 +1,4 @@
 ﻿using ES.Domain.API.Interfaces.Repositories;
-using ES.Domain.API.Models;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -26,7 +25,8 @@ namespace ES.Infra.API
             if (filter == null)
             {
                 return await DbSet.ToListAsync();
-            } else
+            }
+            else
             {
                 return await DbSet.Where(filter).ToListAsync();
             }

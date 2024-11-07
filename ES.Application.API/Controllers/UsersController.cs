@@ -1,5 +1,4 @@
 ﻿using ES.Services.API.Aggregates.UsersAggregates.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ES.Application.API.Controllers

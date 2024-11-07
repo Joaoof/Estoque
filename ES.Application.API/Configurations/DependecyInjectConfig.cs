@@ -13,7 +13,6 @@ using FluentValidation.AspNetCore;
 using IFA.Domain.API.Interfaces;
 using IFA.Infra.API;
 using IFA.Infra.API.Context;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace ES.Application.API.Configurations
@@ -36,8 +35,6 @@ namespace ES.Application.API.Configurations
             {
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("ES.Application.API"));
             });
-
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<EstoqueContext>();
 
             services.AddScoped<Func<EstoqueContext>>((provider) => () => provider.GetService<EstoqueContext>());
             services.AddScoped<DbFactory>();

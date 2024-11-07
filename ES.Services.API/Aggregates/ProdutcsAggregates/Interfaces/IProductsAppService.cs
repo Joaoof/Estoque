@@ -2,8 +2,6 @@
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Request;
 using ES.Services.API.Aggregates.ProdutcsAggregates.ProductsViewModels.Response;
 using ES.Services.API.Common;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq.Expressions;
 
 namespace ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces
 {
