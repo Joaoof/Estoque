@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ES.Application.API.Controllers
 {
+    [ApiController]
+    [Route("Account")]
     public class AccountController : Controller
     {
         private readonly IAccountAppService _accountAppService;
@@ -14,7 +16,7 @@ namespace ES.Application.API.Controllers
            _accountAppService = accountAppService;
         }
 
-        [HttpPost]
+        [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterModel registerModel)
         {
             if (!ModelState.IsValid)
@@ -37,7 +39,7 @@ namespace ES.Application.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPost]
+        [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginModel loginModel)
         {
             if (!ModelState.IsValid)
