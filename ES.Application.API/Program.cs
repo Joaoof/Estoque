@@ -18,7 +18,6 @@ var options = new JsonSerializerOptions
 };
 
 // Add services to the container.
-
 builder.Services.ConfigureServices();
 builder.Services.AddControllers().AddJsonOptions(options =>
 {

@@ -74,7 +74,7 @@ namespace ES.Application.API.Configurations
         }
 
         public static IServiceCollection AddAuth(this IServiceCollection services)
-        {
+        {     
             return (IServiceCollection)services.AddIdentityCore<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<EstoqueContext>();
         }
     }
