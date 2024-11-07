@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -38,6 +38,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ES.Infra.API\ES.Infra.API.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Aggregates\AccountAggregates\" />
+    <Folder Include="Aggregates\UsersAggregates\UsersViewModels\" />
+    <Folder Include="Aggregates\UsersAggregates\Services\" />
   </ItemGroup>
 
 </Project>
