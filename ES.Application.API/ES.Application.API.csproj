@@ -38,8 +38,4 @@
     <ProjectReference Include="..\ES.Services.API\ES.Services.API.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Account\" />
-  </ItemGroup>
-
 </Project>
