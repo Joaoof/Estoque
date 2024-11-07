@@ -34,7 +34,7 @@ namespace ES.Infra.API.Context
                 WithMany(role => role.Users)
                 .HasForeignKey(user => user.UserRoleId);
 
-            modelBuilder.Entity<UserRolesModel>().HasData(new UserRolesModel { Id = 1, RoleName = Domain.API.Enuns.RolesEnum.Admin },
+            modelBuilder.Entity<UserRolesModel>().HasData(new UserRolesModel { Id = 1, RoleName = Domain.API.Enuns.RolesEnum.Admin });
 
             // Se n tiver cria por padrão isso aqui
             modelBuilder.Entity<UsersModel>().HasData(new UsersModel
@@ -44,7 +44,7 @@ namespace ES.Infra.API.Context
                 Email = "admin@teste.com.br",
                 Password = "admin",
                 UserRoleId = 1,
-            }));
+            });
         }
 
     }
