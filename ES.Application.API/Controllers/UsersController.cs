@@ -7,9 +7,9 @@ namespace ES.Application.API.Controllers
     [Route("users")]
     public class UsersController : ControllerBase
     {
-        private readonly IUserAppService _usersAppService;
+        private readonly IUsersAppService _usersAppService;
 
-        public UsersController(IUserAppService usersAppService)
+        public UsersController(IUsersAppService usersAppService)
         {
             _usersAppService = usersAppService;
         }
