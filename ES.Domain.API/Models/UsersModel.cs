@@ -20,11 +20,5 @@ namespace ES.Domain.API.Models
         [PasswordPropertyText]
         [Required]
         public string Password { get; set; }
-
-        [Required]
-        public int UserRoleId { get; set; }
-
-        [ForeignKey("UserRoleId")]
-        public UserRolesModel UserRole { get; set; }
     }
 }
