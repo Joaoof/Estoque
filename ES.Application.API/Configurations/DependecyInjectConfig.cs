@@ -1,4 +1,5 @@
-﻿using ES.Domain.API.Interfaces.Repositories;
+﻿using ES.Domain.API.Interfaces;
+using ES.Domain.API.Interfaces.Repositories;
 using ES.Infra.API;
 using ES.Infra.API.Context;
 using ES.Infra.API.Repositories;
@@ -13,7 +14,6 @@ using ES.Services.API.Helpers.Interfaces;
 using ES.Services.API.Validation.Products;
 using FluentValidation.AspNetCore;
 using IFA.Domain.API.Interfaces;
-using IFA.Infra.API;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 
