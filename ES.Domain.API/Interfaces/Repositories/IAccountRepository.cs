@@ -1,6 +1,4 @@
-﻿using ES.Domain.API.Models;
-using Microsoft.AspNetCore.Identity;
-using System.Linq.Expressions;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace ES.Domain.API.Interfaces.Repositories
 {
