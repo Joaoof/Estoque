@@ -1,7 +1,6 @@
 ﻿using ES.Domain.API.Models;
 using ES.Services.API.Aggregates.AccountAggregates.AccountViewModel;
 using ES.Services.API.Aggregates.AccountAggregates.Interface;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ES.Application.API.Controllers
