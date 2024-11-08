@@ -20,5 +20,8 @@ namespace ES.Domain.API.Models
         [PasswordPropertyText]
         [Required]
         public string Password { get; set; }
+
+        [Required]
+        public bool IsActive { get; set; }
     }
 }
