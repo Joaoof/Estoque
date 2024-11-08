@@ -25,16 +25,16 @@ namespace ES.Application.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            var result = _accountAppService.RegisterUserAsync(model);
+            var result = await _accountAppService.RegisterUserAsync(model);
 
 
-            if (result.IsCompletedSuccessfully)
+            if (result.Succeeded)
             {
                 return Ok("User registered successfully");
             }
 
 
-            foreach (var error in result.Result.Errors)
+            foreach (var error in result.Errors)
             {
                 ModelState.AddModelError(string.Empty, error.Description);
             }
