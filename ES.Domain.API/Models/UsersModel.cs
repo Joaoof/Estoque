@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ES.Domain.API.Models
 {
-    [Table("Usuarios", Schema = "estoque")]
+    [Table("Usuarios")]
     public class UsersModel
     {
         [Key]

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ES.Domain.API.Models
 {
-    [Table("Produtos", Schema = "estoque")]
+    [Table("Produtos")]
     public class ProductsModel
     {
         [Key]
