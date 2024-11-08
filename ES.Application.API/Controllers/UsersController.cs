@@ -1,11 +1,13 @@
 ﻿using ES.Domain.API.Models;
 using ES.Services.API.Aggregates.UsersAggregates.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ES.Application.API.Controllers
 {
     [ApiController]
     [Route("users")]
+    [Authorize(Roles = "Admin")]
     public class UsersController : ControllerBase
     {
         private readonly IUsersAppService _usersAppService;

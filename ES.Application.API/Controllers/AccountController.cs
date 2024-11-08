@@ -1,4 +1,5 @@
 ﻿using ES.Domain.API.Models;
+using ES.Services.API.Aggregates.AccountAggregates.AccountViewModel;
 using ES.Services.API.Aggregates.AccountAggregates.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,14 +18,14 @@ namespace ES.Application.API.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register(RegisterModel registerModel)
+        public async Task<IActionResult> Register(RegisterUserViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var result = _accountAppService.RegisterUserAsync(registerModel);
+            var result = _accountAppService.RegisterUserAsync(model);
 
             if (result.IsCompletedSuccessfully)
             {
