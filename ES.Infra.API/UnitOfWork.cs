@@ -1,7 +1,7 @@
 ﻿using IFA.Domain.API.Interfaces;
 using IFA.Infra.API.Context;
 
-namespace IFA.Infra.API
+namespace ES.Infra.API
 {
     public class UnitOfWork : IUnitOfWork
     {

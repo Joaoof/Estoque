@@ -1,4 +1,4 @@
-﻿using ES.Domain.API.Interfaces.Repositories;
+﻿using ES.Domain.API.Interfaces;
 using IFA.Infra.API.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
