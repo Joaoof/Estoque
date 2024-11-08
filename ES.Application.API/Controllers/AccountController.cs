@@ -27,6 +27,7 @@ namespace ES.Application.API.Controllers
 
             var result = _accountAppService.RegisterUserAsync(model);
 
+
             if (result.IsCompletedSuccessfully)
             {
                 return Ok("User registered successfully");
