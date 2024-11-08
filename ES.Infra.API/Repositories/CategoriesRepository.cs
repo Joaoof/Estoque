@@ -7,17 +7,17 @@ namespace ES.Infra.API.Repositories
 {
     public class CategoriesRepository : Repository<CategoriesModel>, ICategoriesRepository
     {
-        private readonly DbSet<CategoriesModel> _DbsetPessoa;
+        private readonly DbSet<CategoriesModel> _DbsetCategory;
 
 
         public CategoriesRepository(DbFactory dbFactory) : base(dbFactory)
         {
-            _DbsetPessoa = dbFactory.DbContext.Set<CategoriesModel>();
+            _DbsetCategory = dbFactory.DbContext.Set<CategoriesModel>();
         }
 
         public async Task<List<CategoriesModel>> GetAllCategoriesAsync()
         {
-            return await _DbsetPessoa.ToListAsync();
+            return await _DbsetCategory.ToListAsync();
         }
     }
 }

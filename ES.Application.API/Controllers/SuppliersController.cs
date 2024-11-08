@@ -13,5 +13,18 @@ namespace ES.Application.API.Controllers
         {
             _suppliersAppService = suppliersAppService;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetInformationAllSuppliers()
+        {
+            var all = await _suppliersAppService.GetInformationAllSuppliers();
+
+            if (all is null)
+            {
+                return NoContent();
+            }
+
+            return Ok(all);
+        }
     }
 }

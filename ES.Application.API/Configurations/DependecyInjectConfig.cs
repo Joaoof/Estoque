@@ -9,6 +9,8 @@ using ES.Services.API.Aggregates.CategoriesAggregates.Interfaces;
 using ES.Services.API.Aggregates.CategoriesAggregates.Services;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Interfaces;
 using ES.Services.API.Aggregates.ProdutcsAggregates.Services;
+using ES.Services.API.Aggregates.SuppliersAggregates.Interface;
+using ES.Services.API.Aggregates.SuppliersAggregates.Services;
 using ES.Services.API.Aggregates.UsersAggregates.Interface;
 using ES.Services.API.Aggregates.UsersAggregates.Services;
 using ES.Services.API.Helpers;
@@ -54,6 +56,7 @@ namespace ES.Application.API.Configurations
                 .AddScoped(typeof(ICategoriesRepository), typeof(CategoriesRepository))
                 .AddScoped(typeof(IAccountRepository), typeof(AccountRepository))
                 .AddScoped(typeof(IUsersRepository), typeof(UsersRepository))
+                .AddScoped(typeof(ISuppliersRepository), typeof(SuppliersRepository))
                 .AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
         }
@@ -64,6 +67,7 @@ namespace ES.Application.API.Configurations
                 .AddScoped<ICategoriesAppService, CategoriesAppService>()
                 .AddScoped<IAccountAppService, AccountAppService>()
                 .AddScoped<IUsersAppService, UsersAppService>()
+                .AddScoped<ISuppliersAppService, SuppliersAppService>()
                 .AddScoped<ISkuGenerator, SkuGenerator>();
         }
 
