@@ -1,10 +1,11 @@
 ﻿using ES.Domain.API.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ES.Infra.API.Context
 {
-    public class EstoqueContext : IdentityDbContext
+    public class EstoqueContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<ProductsModel> Products { get; set; }
 
@@ -12,7 +13,7 @@ namespace ES.Infra.API.Context
 
         public DbSet<UsersModel> Users { get; set; }
 
-        public DbSet<RegisterModel> Register { get; set; }
+        //public DbSet<RegisterModel> Register { get; set; }
 
         public DbSet<LoginModel> Login { get; set; }
 
@@ -49,7 +50,7 @@ namespace ES.Infra.API.Context
                 Password = "admin",
             });
 
-            modelBuilder.Entity<RegisterModel>().HasNoKey();
+            //modelBuilder.Entity<RegisterModel>().HasNoKey();
             modelBuilder.Entity<LoginModel>().HasNoKey();
 
 

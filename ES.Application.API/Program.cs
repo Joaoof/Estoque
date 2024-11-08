@@ -2,8 +2,6 @@ using ES.Application.API.Configurations;
 using ES.Infra.API.Context;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
-
-//using ES.Services.API.FilterMessage;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -17,25 +15,36 @@ var options = new JsonSerializerOptions
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
 };
 
-// Add services to the container.
+// Adicionar serviços ao contêiner
 builder.Services.ConfigureServices();
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-});
 
-builder.Services.AddControllers().AddNewtonsoftJson(options =>
-{
-    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-});
+// Configuração de controllers e serialização JSON
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+    })
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+    });
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Configuração do Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<EstoqueContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("ES.Infra.API")).EnableSensitiveDataLogging());
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<EstoqueContext>().AddDefaultTokenProviders();
+// Configuração do DbContext para PostgreSQL com migrações
+builder.Services.AddDbContext<EstoqueContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
+    b => b.MigrationsAssembly("ES.Infra.API"))
+    .EnableSensitiveDataLogging());
 
+// Configuração do Identity
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<EstoqueContext>()
+    .AddDefaultTokenProviders();
+
+// Configuração das opções de senha
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequiredLength = 10;
@@ -43,6 +52,7 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequireNonAlphanumeric = false;
 });
 
+// Configuração da autenticação usando cookies
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -51,21 +61,16 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
     });
 
-builder.Services.AddDatabase(_configuration);
-
+// Serviços adicionais e configurações
 builder.Services.AddDatabase(_configuration);
 builder.Services.AddRepositories();
-
-// Adicione seus serviços e configurações aqui
 builder.Services.AddServices(_configuration);
-
 builder.Services.AddCors(_configuration);
-
 builder.Services.AddAutoMapperConfiguration();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configuração do pipeline de requisições HTTP
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
