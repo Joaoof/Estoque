@@ -17,6 +17,8 @@ namespace ES.Infra.API.Context
 
         public DbSet<LoginModel> Login { get; set; }
 
+        public DbSet<SupplierModel> Suppliers { get; set; }
+
         public EstoqueContext(DbContextOptions<EstoqueContext> options) : base(options)
         {
 
