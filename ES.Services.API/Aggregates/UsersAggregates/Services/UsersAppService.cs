@@ -31,9 +31,9 @@ namespace ES.Services.API.Aggregates.UsersAggregates.Services
         }
 
 
-        public async Task<bool> UpdateUser(UsersModel usersModel)
+        public async Task<bool> UpdateUsers(UsersModel userModel)
         {
-            var update = await _usersRepository.UpdateAsync(usersModel);
+            var update = await _usersRepository.UpdateAsync(userModel);
 
             await _unitOfWork.CommitAsync();
 
@@ -49,9 +49,11 @@ namespace ES.Services.API.Aggregates.UsersAggregates.Services
                 return false;
             }
 
-            user.IsActive = isActive;
 
+            user.IsActive = isActive;
+        
             await _usersRepository.UpdateAsync(user);
+            await _unitOfWork.CommitAsync();
 
             return true;
         }

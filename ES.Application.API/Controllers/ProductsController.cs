@@ -66,7 +66,7 @@ namespace ES.Application.API.Controllers
             return Ok(register);
         }
 
-        [HttpPut]
+        [HttpPut]   
         [Route("Atualizar")]
         public async Task<IActionResult> UpdateProduct(ProductsModel productsModel)
         {
