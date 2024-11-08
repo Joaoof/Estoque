@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ES.Domain.API.Models
 {
-    public class SupplierModel
+    public class SuppliersModel
     {
         public int Id { get; set; } // Identificador único do fornecedor
 
