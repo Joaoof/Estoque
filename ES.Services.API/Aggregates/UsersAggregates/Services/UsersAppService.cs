@@ -13,11 +13,18 @@ namespace ES.Services.API.Aggregates.UsersAggregates.Services
             _usersRepository = usersRepository;
         }
 
-        public async Task<UsersModel> GetInformationUserId(int id)
+        public async Task<List<UsersModel>> GetInformationAllUsers()
         {
-            var usersAll = await _usersRepository.GetByIdAsync(id);
+            var usersAll = await _usersRepository.GetAllAsync();
 
             return usersAll;
+        }
+
+        public async Task<UsersModel> GetInformationUserId(int id)
+        {
+            var user = await _usersRepository.GetByIdAsync(id);
+
+            return user;
         }
     }
 }

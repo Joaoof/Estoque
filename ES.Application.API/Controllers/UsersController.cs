@@ -14,6 +14,19 @@ namespace ES.Application.API.Controllers
             _usersAppService = usersAppService;
         }
 
+        [HttpGet()]
+        public async Task<IActionResult> GetInformationAllUsers()
+        {
+            var usersAll = await _usersAppService.GetInformationAllUsers();
+
+            if (usersAll == null)
+            {
+                return NoContent();
+            }
+
+            return Ok(usersAll);
+        }
+
 
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetInformationUserId(int id)

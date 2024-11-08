@@ -35,9 +35,9 @@ namespace ES.Infra.API.Context
                 .WithOne(Products => Products.Categories).HasForeignKey(product => product.CategoryId);
 
 
-            modelBuilder.Entity<UsersModel>().HasOne(user => user.UserRole).
-                WithMany(role => role.Users)
-                .HasForeignKey(user => user.UserRoleId);
+            //modelBuilder.Entity<UsersModel>().HasOne(user => user.UserRole).
+            //    WithMany(role => role.Users)
+            //    .HasForeignKey(user => user.UserRoleId);
 
 
             // Se n tiver cria por padrão isso aqui
