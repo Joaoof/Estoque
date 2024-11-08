@@ -14,7 +14,7 @@ namespace ES.Infra.API.Repositories
             _DbsetPessoa = dbFactory.DbContext.Set<UsersModel>();
         }
 
-        public async Task<UsersModel> GetById(int id)
+        public async Task<UsersModel> GetByIdAsync(int id)
         {
             var user = await DbSet.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
 
