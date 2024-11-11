@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ES.Domain.API.Models
 {
+    [Table("Fornecedores")]   
     public class SuppliersModel
     {
         public int Id { get; set; } // Identificador único do fornecedor
